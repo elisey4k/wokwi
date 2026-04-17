@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Daron",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 48.6, "left": -48.6, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 227,
+      "left": 278.4,
+      "attrs": { "color": "green", "xray": "1", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 294.4,
+      "left": 216.8,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "lcd1:SDA", "uno:A4", "orange", [ "h0" ] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [ "h0" ] ],
+    [ "btn1:1.l", "uno:GND.2", "black", [ "h-38.4", "v19.2", "h-115.2" ] ],
+    [ "btn1:2.r", "uno:2", "gray", [ "h19.4", "v-220.6", "h-182.4" ] ]
+  ],
+  "dependencies": {}
+}
